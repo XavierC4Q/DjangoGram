@@ -80,6 +80,7 @@ class UserSerializer (serializers.ModelSerializer):
 
         model = User
         fields = (
+            'id',
             'username',
             'email',
             'date_joined',

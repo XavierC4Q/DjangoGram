@@ -9,5 +9,6 @@ urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     path('admin/', admin.site.urls),
     url(R'^rest_auth/', include('rest_auth.urls')),
     url(R'^rest_auth/signup/', include('rest_auth.registration.urls')),
-    path('api/', include('api.urls'))
+    path('api/', include('api.urls')),
+    path('djangogram/', include('client.urls')),
 ]
