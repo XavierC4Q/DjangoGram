@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.postgres.fields import ArrayField
 
+
 class User (AbstractUser):
 
     email = models.EmailField(blank=False, null=False)
@@ -15,7 +16,6 @@ class User (AbstractUser):
 
     def __str__(self):
         return F'User: {self.username}'
-
 
 
 class Post (models.Model):
@@ -55,5 +55,7 @@ class Like (models.Model):
     liked_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.user.username + ' likes ' + self.post.id
+        return self.user.username + ' likes ' + str(self.post.id)
+
+
 

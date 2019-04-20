@@ -135,6 +135,10 @@ REST_FRAMEWORK = {
     ),
 }
 
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'api.serializers.RegisterSerializer',
+}
+
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
